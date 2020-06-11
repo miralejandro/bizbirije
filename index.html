@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+
+  <title>bizbirije</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="css/wrapper.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>-->
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container" style="background-position-y: bottom;">
+        <img src="img/banner-min.png" width="100%" alt="">
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mt-5">
+          <div class="">
+            <h2 class="display-4">¡Tú puedes ser reportero o reportera de bizbirije!</h2>
+            <p>Puedes generar tu credencial de rpeortero seleccionando uno de los siguientes diseños. Luego introduce tu nombre y sube tu foto.<br>¡Podrás descargar tu credencial como imagen o PDF y luego imprimirla!</p>
+          </div>
+          <div class="wrapper"> 
+            <div> 
+              <img onclick="updateCanvas(this)" src="img/cards/YLM.png" alt="">
+              <img onclick="updateCanvas(this)" src="img/cards/GSM.png" alt="">
+              <img onclick="updateCanvas(this)" src="img/cards/BSM.png" alt="">
+              <img onclick="updateCanvas(this)" src="img/cards/YLW.png" alt="">
+              <img onclick="updateCanvas(this)" src="img/cards/GSW.png" alt="">
+              <img onclick="updateCanvas(this)" src="img/cards/BSW.png" alt="">
+            </div> 
+          </div>
+          <form class="mt-5" action="">
+            <h4>Tus datos</h4>
+            <div class="form-group row">
+              <label for="nameInput" class="col-sm-2 col-form-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="nameInput" name="name" onkeyup="updateName()">
+              </div>
+            </div>
+
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="photoInput">
+              <label class="custom-file-label" for="photoInput">Elegir fotografía</label>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6 order-lg-1 text-center">
+          <canvas id="credential" width="502" height="738" class="mt-5" style="border:1px solid #02e191;">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Desarrollo: <a href="miralejandro.com">miralejadro.com</a></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var c = document.getElementById("credential");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Selecciona un diseño",10,50);
+  </script>
+  <script src="js/generator.js"></script>
+
+</body>
+
+</html>
